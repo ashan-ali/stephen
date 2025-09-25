@@ -1,6 +1,5 @@
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
 #-------------------------------------------------------------------------------------
@@ -19,3 +18,4 @@ if st.button("Predict Score"):
     st.success(f"Predicted score is ==>{predicted_scores}")
 st.write ("###Sample Training Data")
 st.dataframe(data)
+
