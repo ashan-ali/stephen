@@ -10,12 +10,16 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, rando
 
 model = LinearRegression()
 model.fit(x_train, y_train)
+
 #Streamlit interface......
 st.title("Exam Score Predictor")
+st.image("exam.png")
+st.title("-" * 45)
 hour = st.number_input("Enter Hours Studies:")
 if st.button("Predict Score"):
     predicted_scores = model.predict([[hour]])[0]
     st.success(f"Predicted score is ==>{predicted_scores}")
 st.write ("###Sample Training Data")
 st.dataframe(data)
+
 
